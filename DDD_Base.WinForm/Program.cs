@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DDD_Base.WinForm.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace DDD_Base.WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new UserVIew());
         }
     }
 }
