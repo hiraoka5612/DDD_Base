@@ -1,4 +1,5 @@
-﻿using DDD_Base.Infrastructure;
+﻿using DDD_Base.Domain.Entities;
+using DDD_Base.Infrastructure;
 using DDD_Base.Infrastructure.Fake;
 using DDD_Base.WinForm.ViewModels;
 using System;
@@ -18,6 +19,11 @@ namespace DDD_Base.WinForm.Views
 
             UserIdTextBox.DataBindings.Add("Text", _viewModel, nameof(_viewModel.IdText));
             UserNameTextBox.DataBindings.Add("Text", _viewModel, nameof(_viewModel.NameText));
+
+            AreasComboBox.DataBindings.Add("SelectedValue", _viewModel, nameof(_viewModel.SelectedAreaId));
+            AreasComboBox.DataBindings.Add("DataSource", _viewModel, nameof(_viewModel.Areas));
+            AreasComboBox.ValueMember = nameof(AreaEntity.AreaId);
+            AreasComboBox.DisplayMember = nameof(AreaEntity.AreaName);
         }
 
         private void SearchButton_Click(object sender, EventArgs e)

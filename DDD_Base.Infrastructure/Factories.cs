@@ -2,11 +2,6 @@
 using DDD_Base.Domain.Repositories;
 using DDD_Base.Infrastructure.Fake;
 using DDD_Base.Infrastructure.Postgre;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DDD_Base.Infrastructure
 {
@@ -20,6 +15,16 @@ namespace DDD_Base.Infrastructure
             }
 
             return new UserPostgre();
+        }
+
+        public static IAreaRepository CreateArea()
+        {
+            if (Shared.IsFake)
+            {
+                return new AreaFake();
+            }
+
+            return new AreaPostgre();
         }
     }
 }

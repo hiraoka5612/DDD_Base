@@ -36,6 +36,8 @@
             this.SearchButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.CloseLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.AreasComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +76,7 @@
             // 
             // SearchButton
             // 
-            this.SearchButton.Location = new System.Drawing.Point(34, 151);
+            this.SearchButton.Location = new System.Drawing.Point(34, 200);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(245, 47);
             this.SearchButton.TabIndex = 4;
@@ -89,17 +91,36 @@
             // CloseLabel
             // 
             this.CloseLabel.AutoSize = true;
-            this.CloseLabel.Location = new System.Drawing.Point(41, 225);
+            this.CloseLabel.Location = new System.Drawing.Point(42, 282);
             this.CloseLabel.Name = "CloseLabel";
             this.CloseLabel.Size = new System.Drawing.Size(52, 18);
             this.CloseLabel.TabIndex = 5;
             this.CloseLabel.Text = "label3";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 149);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 27);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "エリア";
+            // 
+            // AreasComboBox
+            // 
+            this.AreasComboBox.FormattingEnabled = true;
+            this.AreasComboBox.Location = new System.Drawing.Point(128, 146);
+            this.AreasComboBox.Name = "AreasComboBox";
+            this.AreasComboBox.Size = new System.Drawing.Size(189, 26);
+            this.AreasComboBox.TabIndex = 7;
+            // 
             // UserVIew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 259);
+            this.ClientSize = new System.Drawing.Size(674, 433);
+            this.Controls.Add(this.AreasComboBox);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.CloseLabel);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.UserNameTextBox);
@@ -124,5 +145,7 @@
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label CloseLabel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox AreasComboBox;
     }
 }
